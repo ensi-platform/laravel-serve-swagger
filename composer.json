@@ -1,0 +1,23 @@
+{
+  "name": "greensight/laravel-serve-swagger",
+  "description": "",
+  "type": "library",
+  "authors": [
+    {
+      "name": "Golubkova Natalia",
+      "email": "golubkova@greensight.ru"
+    }
+  ],
+  "require": {
+    "php": "^7.1.3",
+    "swagger-api/swagger-ui": "^3.25"
+  },
+  "autoload": {
+    "psr-4": {
+      "Greensight\\LaravelServeSwagger\\": "src/"
+    }
+  },
+  "require-dev": {
+    "laravel/framework": "^5.8"
+  }
+}
