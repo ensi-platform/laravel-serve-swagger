@@ -18,6 +18,13 @@
       "Greensight\\LaravelServeSwagger\\": "src/"
     }
   },
+  "extra": {
+    "laravel": {
+        "providers": [
+            "Greensight\\LaravelServeSwagger\\ServeSwaggerServiceProvider"
+        ]
+    }
+},
   "require-dev": {
     "laravel/framework": "^5.8"
   }
