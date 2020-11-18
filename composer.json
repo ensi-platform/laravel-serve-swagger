@@ -2,6 +2,7 @@
   "name": "greensight/laravel-serve-swagger",
   "description": "",
   "type": "library",
+  "license": "MIT",
   "authors": [
     {
       "name": "Golubkova Natalia",
