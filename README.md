@@ -4,7 +4,7 @@
 
 ## Установка
 
-1. Зарегистрируйте `ServeSwaggerServiceProvider` в вашем `config/app.php`
+1. `composer require greensight/laravel-serve-swagger`
 2. Скопируйте себе `config/serve-swagger.php` и настройте путь для роутинга и массив ссылок до ваших openapi3 конфигов
 
 ## Формат массива urls в конфиге 
