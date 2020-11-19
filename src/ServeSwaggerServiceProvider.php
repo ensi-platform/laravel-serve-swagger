@@ -2,6 +2,7 @@
 
 namespace Greensight\LaravelServeSwagger;
 
+use Greensight\LaravelServeSwagger\Controllers\SwaggerController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 
@@ -23,8 +24,8 @@ class ServeSwaggerServiceProvider extends ServiceProvider
             ->name('serve-swagger.')
             ->prefix(config('serve-swagger.path'))
             ->group(function () {
-                Route::get('assets/{asset}/{ext}', 'SwaggerController@asset')->name('asset');
-                Route::get('', 'SwaggerController@documentation')->name('documentation');
+                Route::get('assets/{asset}/{ext}', [SwaggerController::class, 'asset'])->name('asset');
+                Route::get('', [SwaggerController::class, 'documentation'])->name('documentation');
             });
     }
 }
