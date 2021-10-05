@@ -1,6 +1,6 @@
 <?php
 
-namespace Greensight\LaravelServeSwagger\Controllers;
+namespace Ensi\LaravelServeSwagger\Controllers;
 
 use Illuminate\Http\Response;
 use Illuminate\Routing\Controller;

@@ -1,8 +1,8 @@
 <?php
 
-namespace Greensight\LaravelServeSwagger;
+namespace Ensi\LaravelServeSwagger;
 
-use Greensight\LaravelServeSwagger\Controllers\SwaggerController;
+use Ensi\LaravelServeSwagger\Controllers\SwaggerController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 
@@ -20,7 +20,7 @@ class ServeSwaggerServiceProvider extends ServiceProvider
 
         $this->loadViewsFrom(__DIR__ . '/views', 'serve-swagger');
 
-        Route::namespace('Greensight\LaravelServeSwagger\Controllers')
+        Route::namespace('Ensi\LaravelServeSwagger\Controllers')
             ->name('serve-swagger.')
             ->prefix(config('serve-swagger.path'))
             ->group(function () {

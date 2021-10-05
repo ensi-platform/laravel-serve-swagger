@@ -1,5 +1,5 @@
 {
-  "name": "greensight/laravel-serve-swagger",
+  "name": "ensi/laravel-serve-swagger",
   "description": "",
   "type": "library",
   "license": "MIT",
@@ -15,7 +15,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Greensight\\LaravelServeSwagger\\": "src/"
+      "Ensi\\LaravelServeSwagger\\": "src/"
     }
   },
   "require-dev": {
