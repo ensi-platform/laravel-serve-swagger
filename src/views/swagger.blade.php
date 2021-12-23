@@ -4,9 +4,9 @@
   <head>
     <meta charset="UTF-8">
     <title>{{ $title }}</title>
-    <link rel="stylesheet" type="text/css" href="{{ route('serve-swagger.asset', ['asset' => 'swagger-ui', 'ext' => 'css'], false) }}" >
-    <link rel="icon" type="image/png" href="{{ route('serve-swagger.asset', ['asset' => 'favicon-32x32', 'ext' => 'png'], false) }}" sizes="32x32" />
-    <link rel="icon" type="image/png" href="{{ route('serve-swagger.asset', ['asset' => 'favicon-16x16', 'ext' => 'png'], false) }}" sizes="16x16" />
+    <link rel="stylesheet" type="text/css" href="{{ asset(route('serve-swagger.asset', ['asset' => 'swagger-ui', 'ext' => 'css'], false)) }}" >
+    <link rel="icon" type="image/png" href="{{ asset(route('serve-swagger.asset', ['asset' => 'favicon-32x32', 'ext' => 'png'], false)) }}" sizes="32x32" />
+    <link rel="icon" type="image/png" href="{{ asset(route('serve-swagger.asset', ['asset' => 'favicon-16x16', 'ext' => 'png'], false)) }}" sizes="16x16" />
     <style>
       html
       {
@@ -33,8 +33,8 @@
   <body>
     <div id="swagger-ui"></div>
 
-    <script src="{{ route('serve-swagger.asset', ['asset' => 'swagger-ui-bundle', 'ext' => 'js'], false) }}"> </script>
-    <script src="{{ route('serve-swagger.asset', ['asset' => 'swagger-ui-standalone-preset', 'ext' => 'js'], false) }}"> </script>
+    <script src="{{ asset(route('serve-swagger.asset', ['asset' => 'swagger-ui-bundle', 'ext' => 'js'], false)) }}"> </script>
+    <script src="{{ asset(route('serve-swagger.asset', ['asset' => 'swagger-ui-standalone-preset', 'ext' => 'js'], false)) }}"> </script>
     <script>
     window.onload = function() {
 

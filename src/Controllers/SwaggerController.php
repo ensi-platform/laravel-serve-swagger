@@ -13,7 +13,7 @@ class SwaggerController extends Controller
         $urls = [];
         foreach (config('serve-swagger.urls') as $url) {
             $urls[] = [
-                'url' => url($url['url']),
+                'url' => asset($url['url']),
                 'name' => $url['name'],
             ];
         }
