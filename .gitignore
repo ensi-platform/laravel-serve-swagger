@@ -6,4 +6,5 @@
 *.komodoproject
 
 vendor
+composer.lock
 
