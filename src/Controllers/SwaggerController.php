@@ -17,6 +17,7 @@ class SwaggerController extends Controller
                 'name' => $url['name'],
             ];
         }
+
         return view('serve-swagger::swagger', [
             'title' => 'Swagger UI',
             'urls' => $urls,
