@@ -8,15 +8,14 @@ use Illuminate\Support\ServiceProvider;
 
 class ServeSwaggerServiceProvider extends ServiceProvider
 {
-    /**
-     * Выполнение после-регистрационной загрузки сервисов.
-     *
-     * @return void
-     */
-    public function boot()
+    public function register(): void
+    {
+        $this->mergeConfigFrom(__DIR__ . '/../config/serve-swagger.php', 'serve-swagger');
+    }
+
+    public function boot(): void
     {
         $this->publishes([__DIR__ . '/../config/serve-swagger.php' => config_path('serve-swagger.php')]);
-        $this->mergeConfigFrom(__DIR__ . '/../config/serve-swagger.php', 'serve-swagger');
 
         $this->loadViewsFrom(__DIR__ . '/views', 'serve-swagger');
 
