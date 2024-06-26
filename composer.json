@@ -1,24 +1,51 @@
 {
-  "name": "ensi/laravel-serve-swagger",
-  "description": "",
-  "type": "library",
-  "license": "MIT",
-  "authors": [
-    {
-      "name": "Golubkova Natalia",
-      "email": "golubkova@greensight.ru"
+    "name": "ensi/laravel-serve-swagger",
+    "description": "Laravel serve swagger",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": "^8.1",
+        "swagger-api/swagger-ui": "^3.30.0 || ^4",
+        "laravel/framework": "^9.0 || ^10.0 || ^11.0"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.2",
+        "pestphp/pest": "^1.22 || ^2.0",
+        "pestphp/pest-plugin-laravel": "^1.1 || ^2.0",
+        "phpstan/extension-installer": "^1.3",
+        "phpstan/phpstan": "^1.11",
+        "spaze/phpstan-disallowed-calls": "^2.15",
+        "orchestra/testbench": "^7.0 || ^8.0 || ^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ensi\\LaravelServeSwagger\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Ensi\\LaravelServeSwagger\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "cs": "php-cs-fixer fix --config .php-cs-fixer.php",
+        "phpstan": "phpstan analyse",
+        "test": "./vendor/bin/pest --parallel --no-coverage",
+        "test-ci": "./vendor/bin/pest --no-coverage",
+        "test-coverage": "XDEBUG_MODE=coverage ./vendor/bin/pest --parallel --coverage"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Ensi\\LaravelServeSwagger\\ServeSwaggerServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true
+        }
     }
-  ],
-  "require": {
-    "php": "^8.0",
-    "swagger-api/swagger-ui": "^3.30.0 || ^4"
-  },
-  "autoload": {
-    "psr-4": {
-      "Ensi\\LaravelServeSwagger\\": "src/"
-    }
-  },
-  "require-dev": {
-    "laravel/framework": "^8.0 || ^9.0 || ^10.0 || ^11.0"
-  }
 }
